@@ -4,7 +4,8 @@
   --panel-strong: rgba(255, 255, 255, 0.82);
   --line: rgba(77, 64, 51, 0.12);
   --text: #2b2520;
-  --muted: #93877b;
+  --muted: #9e9286;
+  --hover: #000;
   --shadow: 0 22px 50px rgba(74, 56, 39, 0.09);
   --radius: 30px;
   --radius-small: 22px;
@@ -22,8 +23,8 @@ html {
 body {
   margin: 0;
   background:
-    radial-gradient(circle at top left, rgba(221, 214, 205, 0.6), transparent 28%),
-    linear-gradient(180deg, #f7f3ee 0%, #f6f2ec 100%);
+    radial-gradient(circle at top left, rgba(228, 215, 201, 0.5), transparent 28%),
+    linear-gradient(180deg, #fcf7f0 0%, #f7efe5 100%);
   color: var(--text);
   font-family: "Montserrat", sans-serif;
 }
@@ -94,7 +95,7 @@ button {
   font-size: clamp(0.8rem, 0.72vw, 0.95rem);
   letter-spacing: 0.26em;
   text-transform: uppercase;
-  color: #000;
+  color: var(--muted);
 }
 
 .nav-group {
@@ -108,7 +109,7 @@ button {
 .site-nav a:hover,
 .site-nav a:focus-visible,
 .nav-work.nav-open > a {
-  color: var(--text);
+  color: var(--hover);
 }
 
 .site-nav a[aria-current="page"],
@@ -135,12 +136,26 @@ button {
   transition: opacity 180ms ease, transform 180ms ease;
 }
 
+.work-dropdown::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: -16px;
+  height: 16px;
+}
+
 .work-dropdown a {
   display: block;
 }
 
 .work-dropdown a[aria-current="page"] {
   color: var(--text);
+}
+
+.work-dropdown a:hover,
+.work-dropdown a:focus-visible {
+  color: var(--hover);
 }
 
 .nav-work:hover .work-dropdown,
@@ -157,7 +172,7 @@ button {
   background: transparent;
   text-transform: uppercase;
   letter-spacing: 0.2em;
-  color: #000;
+  color: var(--muted);
 }
 
 .hero {
