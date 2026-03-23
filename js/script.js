@@ -56,11 +56,45 @@ if (siteNav) {
   });
 }
 
-const lightbox = document.querySelector(".lightbox");
-const lightboxImage = document.querySelector(".lightbox-image");
-const lightboxClose = document.querySelector(".lightbox-close");
+document.querySelectorAll(".couple-toggle").forEach((toggle) => {
+  toggle.addEventListener("click", () => {
+    const section = toggle.closest(".couple-section");
+    const gallery = section?.querySelector(".couple-gallery");
 
-if (lightbox && lightboxImage) {
+    if (!section || !gallery) {
+      return;
+    }
+
+    const isOpen = section.classList.contains("is-open");
+
+    document.querySelectorAll(".couple-section").forEach((item) => {
+      item.classList.remove("is-open");
+      const itemToggle = item.querySelector(".couple-toggle");
+      itemToggle?.setAttribute("aria-expanded", "false");
+    });
+
+    if (!isOpen) {
+      section.classList.add("is-open");
+      toggle.setAttribute("aria-expanded", "true");
+    }
+  });
+});
+
+const closeLightbox = (lightbox, image) => {
+  lightbox.hidden = true;
+  image.src = "";
+  image.alt = "";
+  document.body.style.overflow = "";
+};
+
+document.querySelectorAll(".lightbox").forEach((lightbox) => {
+  const lightboxImage = lightbox.querySelector(".lightbox-image");
+  const lightboxClose = lightbox.querySelector(".lightbox-close");
+
+  if (!lightboxImage) {
+    return;
+  }
+
   document.querySelectorAll(".lightbox-trigger").forEach((trigger) => {
     trigger.addEventListener("click", () => {
       const image = trigger.querySelector("img");
@@ -75,24 +109,22 @@ if (lightbox && lightboxImage) {
     });
   });
 
-  const closeLightbox = () => {
-    lightbox.hidden = true;
-    lightboxImage.src = "";
-    lightboxImage.alt = "";
-    document.body.style.overflow = "";
-  };
-
-  lightboxClose?.addEventListener("click", closeLightbox);
+  lightboxClose?.addEventListener("click", () => closeLightbox(lightbox, lightboxImage));
 
   lightbox.addEventListener("click", (event) => {
     if (event.target === lightbox) {
-      closeLightbox();
+      closeLightbox(lightbox, lightboxImage);
     }
   });
+});
 
-  document.addEventListener("keydown", (event) => {
-    if (event.key === "Escape" && !lightbox.hidden) {
-      closeLightbox();
-    }
-  });
-}
+document.addEventListener("keydown", (event) => {
+  if (event.key === "Escape") {
+    document.querySelectorAll(".lightbox").forEach((lightbox) => {
+      const image = lightbox.querySelector(".lightbox-image");
+      if (!lightbox.hidden && image) {
+        closeLightbox(lightbox, image);
+      }
+    });
+  }
+});
