@@ -1,544 +1,81 @@
 <!DOCTYPE html>
-<html lang="zxx">
-
+<html lang="en">
 <head>
   <meta charset="utf-8">
-  <title>Melanie Balaz</title>
-
-  <!-- mobile responsive meta -->
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  
-  <!-- ** Plugins Needed for the Project ** -->
-  <!-- Bootstrap -->
-  <link rel="stylesheet" href="plugins/bootstrap/bootstrap.min.css">
-  <!-- slick slider -->
-  <link rel="stylesheet" href="plugins/slick/slick.css">
-  <!-- themefy-icon -->
-  <link rel="stylesheet" href="plugins/themify-icons/themify-icons.css">
-
-  <!-- Google Fonts -->
+  <title>Melanie Balaz</title>
+  <meta name="description" content="Photography portfolio of Melanie Balaz.">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Gowun+Dodum&family=Londrina+Solid&display=swap" rel="stylesheet">
-
-  <!-- Main Stylesheet -->
-  <link href="css/style.css" rel="stylesheet">
-  
-  <!--Favicon-->
-  <link rel="shortcut icon" href="images/favicon.ico" type="image/x-icon">
-  <link rel="icon" href="images/favicon.ico" type="image/x-icon">
-
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500&family=Montserrat:wght@300;400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
 </head>
+<body class="page-home">
+  <div class="page-shell">
+    <header class="site-header">
+      <a class="brand" href="index.html">Melanie Balaz</a>
+      <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="site-nav">
+        Menu
+      </button>
+      <nav class="site-nav" id="site-nav" aria-label="Primary">
+        <div class="nav-group nav-work">
+          <a href="#work" aria-haspopup="true">Work</a>
+          <div class="work-dropdown" aria-label="Work sections">
+            <a class="dropdown-link" href="romance.html">Romance</a>
+            <a class="dropdown-link" href="moments.html">Moments</a>
+            <a class="dropdown-link" href="places.html">Places</a>
+          </div>
+        </div>
+        <a href="#about">About</a>
+      </nav>
+    </header>
 
-<body>
+    <main>
+      <section class="hero">
+        <img src="assets/home/hero-placeholder.jpg" alt="Placeholder hero photograph">
+        <div class="hero-copy">
+          <h1>Telling stories...</h1>
+        </div>
+      </section>
 
-<!-- hero area -->
-<section class="hero-area" id="parallax">
-  <div class="container-fluid">
-    <div class="container padding-top">
-      <h1 class="header-text">
-        Melanie Balaz
-      </h1>
-      <h2 class="header-text-light">Code | Science | Art</h2>
-    </div>
+      <section class="work-section" id="work">
+        <div class="section-spacer" aria-hidden="true"></div>
+        <div class="card-grid">
+          <a class="story-card" href="romance.html">
+            <div class="story-image-wrap">
+              <img src="assets/romance/cover-placeholder.jpg" alt="Placeholder photograph for romance">
+            </div>
+            <span>Romance</span>
+          </a>
+          <a class="story-card" href="moments.html">
+            <div class="story-image-wrap">
+              <img src="assets/moments/cover-placeholder.jpg" alt="Placeholder photograph for moments">
+            </div>
+            <span>Moments</span>
+          </a>
+          <a class="story-card" href="places.html">
+            <div class="story-image-wrap">
+              <img src="assets/places/cover-placeholder.jpg" alt="Placeholder photograph for places">
+            </div>
+            <span>Places</span>
+          </a>
+        </div>
+      </section>
+
+      <section class="about-section" id="about">
+        <div class="about-inner">
+          <p class="eyebrow">About</p>
+          <p class="about-text">
+            I use both science and art as ways of understanding the world, shaping that understanding through creation.
+          </p>
+          <p class="about-contact">
+            Based in Innsbruck. Reach me at melanie.j.balaz(at)gmail(dot)com
+          </p>
+        </div>
+      </section>
+    </main>
   </div>
-</section>
-<!-- /hero area -->
 
-<!-- about -->
-<section class="section">
-  <div class="container text-center">
-    <div class="row">
-      <div class="col-lg-10 mx-auto">
-        <h2 class=""> Challenges and patterns </h2>
-        <p class="paragraph-lg text-dark">
-          Hi! I am Melanie, an interdisciplinary scientist/developer/artist, with a passion for technology, bioinformatics and various media of art and design.
-          Originally from Vienna, Austria, I am currently living in Helsinki, Finland and completing my masters degree in Life Science Informatics at the University of Helsinki.
-          I like challenges of all sorts (in my freetime you will find me climbing up big rocks) and learning new things and I have come a long way from
-          completing my diploma degree in multimedia in Vienna to working as a data analyst in cancer research in Helsinki. I write code and poetry, I love finding patterns
-          in everything around me, and I like to tell stories through illustration, photography, video editing, and design.
-          Inbetween I like to organise events, such as the <a href="intotech/index.html"> IntoTech </a> Conference, or the <a href="http://www.sci.or.at/category/river-jump/"> River Jump! </a>  festival. I am most happy outside and one of my personal challenges
-          is how to combine this love for movement, travel and nature with science and technology.</p>
-
-      </div>
-    </div>
-    <div class="row">
-      <div class="col-lg-5 mt-5 mx-auto">
-        <div class="d-flex flex-row justify-content-center">
-          <img class="img-fluid clipped" src="images/me.png" alt="headshot">
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-<!-- /about -->
-
-
-<!-- education -->
-<section class="section position-relative">
-  <div class="container-fluid">
-    <div class="row">
-      <div class="col-lg-12 text-center">
-        <h2 class="section-title">Education & Experience</h2>
-      </div>
-      <div class="col-lg-4 col-md-4 mb-80">
-        <div class="d-flex">
-          <div class="mr-lg-5 mr-3">
-            <i class="ti-book icon icon-light icon-bg bg-white shadow rounded-circle d-block"></i>
-          </div>
-          <div>
-            <p class="text-dark mb-1">Ongoing Studies</p>
-            <h4>Masters Degree in Life Science Informatics</h4>
-            <p class="mb-0 text-grey">University of Helsinki</p>
-          </div>
-        </div>
-      </div>
-      <div class="col-lg-4 col-md-4 mb-80">
-        <div class="d-flex">
-          <div class="mr-lg-5 mr-3">
-            <i class="ti-briefcase icon icon-light icon-bg bg-white shadow rounded-circle d-block"></i>
-          </div>
-          <div>
-            <p class="text-dark mb-1">2021-Current</p>
-            <h4>Coordinator for <a href="https://fcai.fi/"> FCAI </a> and <a href="https://www.hiit.fi/"> HIIT </a> </h4>
-            <p class="mb-0 text-grey">University of Helsinki</p>
-          </div>
-        </div>
-      </div>
-      <div class="col-lg-4 col-md-4 mb-80">
-        <div class="d-flex">
-          <div class="mr-lg-5 mr-3">
-            <i class="ti-briefcase icon icon-light icon-bg bg-white shadow rounded-circle d-block"></i>
-          </div>
-          <div>
-            <p class="text-dark mb-1">2020-2021</p>
-            <h4>Data Analyst in DNA Methylation/Cancer Research</h4>
-            <p class="mb-0 text-grey">Oncosys, University of Helsinki</p>
-          </div>
-        </div>
-      </div>
-      <div class="col-lg-4 col-md-4 mb-80">
-        <div class="d-flex">
-          <div class="mr-lg-5 mr-3">
-            <i class="ti-book icon icon-light icon-bg bg-white shadow rounded-circle d-block"></i>
-          </div>
-          <div>
-            <p class="text-dark mb-1">2015 - 2020</p>
-            <h4>Bachelor in Information Technology, Neuroinformatics Bachelor Thesis</h4>
-            <p class="mb-0 text-grey">University of Vienna</p>
-          </div>
-        </div>
-      </div>
-      <div class="col-lg-4 col-md-4 mb-80">
-        <div class="d-flex">
-          <div class="mr-lg-5 mr-3">
-            <i class="ti-briefcase icon icon-light icon-bg bg-white shadow rounded-circle d-block"></i>
-          </div>
-          <div>
-            <p class="text-dark mb-1">2018-2020</p>
-            <h4>Backend Developer</h4>
-            <p class="mb-0 text-grey">George Online Banking, ErsteGroup, Vienna</p>
-          </div>
-        </div>
-      </div>
-      <div class="col-lg-4 col-md-4 mb-80">
-        <div class="d-flex">
-          <div class="mr-lg-5 mr-3">
-            <i class="ti-briefcase icon icon-light icon-bg bg-white shadow rounded-circle d-block"></i>
-          </div>
-          <div>
-            <p class="text-dark mb-1">2017</p>
-            <h4>Chat Service Engineering Internship</h4>
-            <p class="mb-0 text-grey">Fragenebenan, Vienna</p>
-          </div>
-        </div>
-      </div>
-      <div class="col-lg-4 col-md-4 mb-80">
-        <div class="d-flex">
-          <div class="mr-lg-5 mr-3">
-            <i class="ti-briefcase icon icon-light icon-bg bg-white shadow rounded-circle d-block"></i>
-          </div>
-          <div>
-            <p class="text-dark mb-1">2017</p>
-            <h4>Main Organiser & Founder of IntoTech Conference</h4>
-            <p class="mb-0 text-grey">Vienna</p>
-          </div>
-        </div>
-      </div>
-      <div class="col-lg-4 col-md-4 mb-80">
-        <div class="d-flex">
-          <div class="mr-lg-5 mr-3">
-            <i class="ti-book icon icon-light icon-bg bg-white shadow rounded-circle d-block"></i>
-          </div>
-          <div>
-            <p class="text-dark mb-1">2016</p>
-            <h4>International Baltic Summer School of Computer & Network Security</h4>
-            <p class="mb-0 text-grey">Estonia</p>
-          </div>
-        </div>
-      </div>
-      <div class="col-lg-4 col-md-4 mb-80">
-        <div class="d-flex">
-          <div class="mr-lg-5 mr-3">
-            <i class="ti-book icon icon-light icon-bg bg-white shadow rounded-circle d-block"></i>
-          </div>
-          <div>
-            <p class="text-dark mb-1">2013 - 2015</p>
-            <h4>Multimedia Engineer Diploma</h4>
-            <p class="mb-0 text-grey">Die Graphische, Vienna</p>
-          </div>
-        </div>
-      </div>
-      <div class="col-lg-4 col-md-4 mb-80">
-        <div class="d-flex">
-          <div class="mr-lg-5 mr-3">
-            <i class="ti-briefcase icon icon-light icon-bg bg-white shadow rounded-circle d-block"></i>
-          </div>
-          <div>
-            <p class="text-dark mb-1">2014-2015</p>
-            <h4>Webdesigner</h4>
-            <p class="mb-0 text-grey">Ixolit, Vienna</p>
-          </div>
-        </div>
-      </div>
-      <div class="col-lg-4 col-md-4 mb-80">
-        <div class="d-flex">
-          <div class="mr-lg-5 mr-3">
-            <i class="ti-briefcase icon icon-light icon-bg bg-white shadow rounded-circle d-block"></i>
-          </div>
-          <div>
-            <p class="text-dark mb-1">2012-2013</p>
-            <h4>Core Organisation Team of EU-funded environmental project <a href="http://www.sci.or.at/projekte-in-oesterreich/river-jump/"> River Jump! </a> </h4>
-            <p class="mb-0 text-grey">Austria, Czech Republic, Slovakia</p>
-          </div>
-        </div>
-      </div>
-      <div class="col-lg-4 col-md-4 mb-80">
-        <div class="d-flex">
-          <div class="mr-lg-5 mr-3">
-            <i class="ti-briefcase icon icon-light icon-bg bg-white shadow rounded-circle d-block"></i>
-          </div>
-          <div>
-            <p class="text-dark mb-1">2012-2013</p>
-            <h4>Volunteer</h4>
-            <p class="mb-0 text-grey">Vienna, SCI Austria</p>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-  <!-- bg image -->
-  <img class="img-fluid edu-bg-image w-100" src="images/backgrounds/education-bg.png" alt="bg-image">
-</section>
-<!-- /education -->
-
-<!-- services -->
-<section class="section">
-  <div class="container-fluid">
-    <div class="row">
-      <div class="col-md-3 mb-3 mb-md-0">
-        <div class="card hover-shadow shadow">
-          <div class="card-body text-center px-4 py-5">
-            <i class="ti-desktop icon mb-5 d-inline-block"></i>
-            <h4 class="mb-4">Technology</h4>
-            <p> I have several years of experience of working in the technology field, whether as a system administrator, a backend developer with ErsteGroup
-              or a data analyst in cancer research lab. I like to write testable, maintainable, and clean code.
-              More on my <a href="https://github.com/melaniebalaz"> github. </a></p>
-          </div>
-        </div>
-      </div>
-      <div class="col-md-3 mb-3 mb-md-0">
-        <div class="card active-bg-primary hover-shadow shadow">
-          <div class="card-body text-center px-4 py-5">
-            <i class="ti-camera icon mb-5 d-inline-block"></i>
-            <h4 class="mb-4">Photography</h4>
-
-            <p>
-            Since I was little I was often seen running around with a camera in hand. I love taking photographs, and
-              having photoshootings with people. I enjoy both analoge and digital photography, and developing my own film in the darkroom.
-              <br>
-              More examples on my <a href="https://www.viewbug.com/member/melaniejacqueline"> ViewBug. </a></p>
-          </div>
-        </div>
-      </div>
-      <div class="col-md-3 mb-3 mb-md-0">
-        <div class="card hover-shadow shadow">
-          <div class="card-body text-center px-4 py-5">
-            <i class="ti-pencil icon mb-5 d-inline-block"></i>
-            <h4 class="mb-4">Design</h4>
-            <p>I have experience with working with Illustrator, Photoshop and InDesign and work experience as a web designer and a freelance graphic designer.
-              I have created Logos, Icons, Flyers, Webdesigns and Posters and I enjoy building websites such as the
-              <a href="intotech/index.html"> IntoTech Website</a>.</p>
-          </div>
-        </div>
-      </div>
-      <div class="col-md-3 mb-3 mb-md-0">
-        <div class="card hover-shadow shadow">
-          <div class="card-body text-center px-4 py-5">
-            <i class="ti-palette icon mb-5 d-inline-block"></i>
-            <h4 class="mb-4">Illustration</h4>
-            <p> I like adding an illustrated touch to graphic design projects, and I enjoy working with different media both digital and on paper.
-              I have illustrated book covers,
-              created my own graphic novel with watercolors and filled a
-              couple of sketchbooks.</p>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-<!-- /services -->
-
-<!-- portfolio -->
-<section class="section">
-  <div class="container-fluid">
-    <div class="flex-row mb-5">
-      <div class="col-12">
-        <div class="btn-group btn-group-toggle justify-content-center d-flex" data-toggle="buttons">
-          <label class="btn btn-sm btn-primary active">
-            <input type="radio" name="shuffle-filter" value="all" checked="checked" />All
-          </label>
-          <label class="btn btn-sm btn-primary">
-            <input type="radio" name="shuffle-filter" value="photo" />Photography
-          </label>
-          <label class="btn btn-sm btn-primary">
-            <input type="radio" name="shuffle-filter" value="design" />Design
-          </label>
-          <label class="btn btn-sm btn-primary">
-            <input type="radio" name="shuffle-filter" value="illustration" />Illustration
-          </label>
-        </div>
-      </div>
-    </div>
-    <div class="row shuffle-wrapper">
-      <div class="col-lg-4 col-6 mb-4 shuffle-item" data-groups="[&quot;photo&quot;]">
-        <div class="position-relative rounded">
-          <img src="images/portfolio/photo/photo01.jpg" alt="portfolio-image" class="img-fluid rounded w-100 d-block">
-        </div>
-      </div>
-      <div class="col-lg-4 col-6 mb-4 shuffle-item" data-groups="[&quot;photo&quot;]">
-        <div class="position-relative rounded">
-          <img src="images/portfolio/photo/photo02.jpg" alt="portfolio-image" class="img-fluid rounded w-100 d-block">
-        </div>
-      </div>
-      <div class="col-lg-4 col-6 mb-4 shuffle-item" data-groups="[&quot;photo&quot;]">
-        <div class="position-relative rounded">
-          <img src="images/portfolio/photo/photo03.jpg" alt="portfolio-image" class="img-fluid rounded w-100 d-block">
-        </div>
-      </div>
-      <div class="col-lg-4 col-6 mb-4 shuffle-item" data-groups="[&quot;photo&quot;]">
-        <div class="position-relative rounded">
-          <img src="images/portfolio/photo/photo04.jpg" alt="portfolio-image" class="img-fluid rounded w-100 d-block">
-        </div>
-      </div>
-      <div class="col-lg-4 col-6 mb-4 shuffle-item" data-groups="[&quot;photo&quot;]">
-        <div class="position-relative rounded">
-          <img src="images/portfolio/photo/photo05.jpg" alt="portfolio-image" class="img-fluid rounded w-100 d-block">
-        </div>
-      </div>
-      <div class="col-lg-4 col-6 mb-4 shuffle-item" data-groups="[&quot;photo&quot;]">
-        <div class="position-relative rounded">
-          <img src="images/portfolio/photo/photo06.jpg" alt="portfolio-image" class="img-fluid rounded w-100 d-block">
-        </div>
-      </div>
-      <div class="col-lg-4 col-6 mb-4 shuffle-item" data-groups="[&quot;photo&quot;]">
-        <div class="position-relative rounded">
-          <img src="images/portfolio/photo/photo07.jpg" alt="portfolio-image" class="img-fluid rounded w-100 d-block">
-        </div>
-      </div>
-      <div class="col-lg-4 col-6 mb-4 shuffle-item" data-groups="[&quot;photo&quot;]">
-        <div class="position-relative rounded">
-          <img src="images/portfolio/photo/photo08.jpg" alt="portfolio-image" class="img-fluid rounded w-100 d-block">
-        </div>
-      </div>
-      <div class="col-lg-4 col-6 mb-4 shuffle-item" data-groups="[&quot;photo&quot;]">
-        <div class="position-relative rounded">
-          <img src="images/portfolio/photo/photo09.jpg" alt="portfolio-image" class="img-fluid rounded w-100 d-block">
-        </div>
-      </div>
-      <div class="col-lg-4 col-6 mb-4 shuffle-item" data-groups="[&quot;photo&quot;]">
-        <div class="position-relative rounded">
-          <img src="images/portfolio/photo/photo10.jpg" alt="portfolio-image" class="img-fluid rounded w-100 d-block">
-        </div>
-      </div>
-      <div class="col-lg-4 col-6 mb-4 shuffle-item" data-groups="[&quot;photo&quot;]">
-        <div class="position-relative rounded">
-          <img src="images/portfolio/photo/photo11.jpg" alt="portfolio-image" class="img-fluid rounded w-100 d-block">
-        </div>
-      </div>
-      <div class="col-lg-4 col-6 mb-4 shuffle-item" data-groups="[&quot;photo&quot;]">
-        <div class="position-relative rounded">
-          <img src="images/portfolio/photo/photo12.jpg" alt="portfolio-image" class="img-fluid rounded w-100 d-block">
-        </div>
-      </div>
-      <div class="col-lg-4 col-6 mb-4 shuffle-item" data-groups="[&quot;photo&quot;]">
-        <div class="position-relative rounded">
-          <img src="images/portfolio/photo/photo13.jpg" alt="portfolio-image" class="img-fluid rounded w-100 d-block">
-        </div>
-      </div>
-      <div class="col-lg-4 col-6 mb-4 shuffle-item" data-groups="[&quot;photo&quot;]">
-        <div class="position-relative rounded">
-          <img src="images/portfolio/photo/photo14.jpg" alt="portfolio-image" class="img-fluid rounded w-100 d-block">
-        </div>
-      </div>
-      <div class="col-lg-4 col-6 mb-4 shuffle-item" data-groups="[&quot;photo&quot;]">
-        <div class="position-relative rounded">
-          <img src="images/portfolio/photo/photo15.jpg" alt="portfolio-image" class="img-fluid rounded w-100 d-block">
-        </div>
-      </div>
-      <div class="col-lg-4 col-6 mb-4 shuffle-item" data-groups="[&quot;photo&quot;]">
-        <div class="position-relative rounded">
-          <img src="images/portfolio/photo/photo16.jpg" alt="portfolio-image" class="img-fluid rounded w-100 d-block">
-        </div>
-      </div>
-    <!-- PHOTO SECTION END -->
-      <div class="col-lg-4 col-6 mb-4 shuffle-item" data-groups="[&quot;design&quot;]">
-        <div class="position-relative rounded">
-          <img src="images/portfolio/design/design1.png" alt="portfolio-image" class="img-fluid rounded w-100 d-block">
-        </div>
-      </div>
-      <div class="col-lg-4 col-6 mb-4 shuffle-item" data-groups="[&quot;design&quot;]">
-        <div class="position-relative rounded">
-          <img src="images/portfolio/design/design2.png" alt="portfolio-image" class="img-fluid rounded w-100 d-block">
-        </div>
-      </div>
-      <div class="col-lg-4 col-6 mb-4 shuffle-item" data-groups="[&quot;design&quot;]">
-        <div class="position-relative rounded">
-          <img src="images/portfolio/design/design3.jpg" alt="portfolio-image" class="img-fluid rounded w-100 d-block">
-        </div>
-      </div>
-      <div class="col-lg-4 col-6 mb-4 shuffle-item" data-groups="[&quot;design&quot;]">
-        <div class="position-relative rounded">
-          <img src="images/portfolio/design/design4.png" alt="portfolio-image" class="img-fluid rounded w-100 d-block">
-        </div>
-      </div>
-      <div class="col-lg-4 col-6 mb-4 shuffle-item" data-groups="[&quot;design&quot;]">
-        <div class="position-relative rounded">
-          <img src="images/portfolio/design/design5.jpg" alt="portfolio-image" class="img-fluid rounded w-100 d-block">
-        </div>
-      </div>
-      <div class="col-lg-4 col-6 mb-4 shuffle-item" data-groups="[&quot;design&quot;]">
-        <div class="position-relative rounded">
-          <img src="images/portfolio/design/design6.png" alt="portfolio-image" class="img-fluid rounded w-100 d-block">
-        </div>
-      </div>
-       <div class="col-lg-4 col-6 mb-4 shuffle-item" data-groups="[&quot;design&quot;]">
-        <div class="position-relative rounded">
-          <img src="images/portfolio/design/design7.png" alt="portfolio-image" class="img-fluid rounded w-100 d-block">
-        </div>
-      </div>
-       <div class="col-lg-4 col-6 mb-4 shuffle-item" data-groups="[&quot;design&quot;]">
-        <div class="position-relative rounded">
-          <img src="images/portfolio/design/design8.png" alt="portfolio-image" class="img-fluid rounded w-100 d-block">
-        </div>
-      </div>
-       <div class="col-lg-4 col-6 mb-4 shuffle-item" data-groups="[&quot;design&quot;]">
-        <div class="position-relative rounded">
-          <img src="images/portfolio/design/design9.png" alt="portfolio-image" class="img-fluid rounded w-100 d-block">
-        </div>
-      </div>
-
-      <!-- DESIGN END -->
-
-      <div class="col-lg-4 col-6 mb-4 shuffle-item" data-groups="[&quot;illustration&quot;]">
-        <div class="position-relative rounded">
-          <img src="images/portfolio/illustration/illu1.png" alt="portfolio-image" class="img-fluid rounded w-100 d-block">
-        </div>
-      </div>
-      <div class="col-lg-4 col-6 mb-4 shuffle-item" data-groups="[&quot;illustration&quot;]">
-        <div class="position-relative rounded">
-          <img src="images/portfolio/illustration/illu2.png" alt="portfolio-image" class="img-fluid rounded w-100 d-block">
-        </div>
-      </div>
-      <div class="col-lg-4 col-6 mb-4 shuffle-item" data-groups="[&quot;illustration&quot;]">
-        <div class="position-relative rounded">
-          <img src="images/portfolio/illustration/illu3.png" alt="portfolio-image" class="img-fluid rounded w-100 d-block">
-        </div>
-      </div>
-      <div class="col-lg-4 col-6 mb-4 shuffle-item" data-groups="[&quot;illustration&quot;]">
-        <div class="position-relative rounded">
-          <img src="images/portfolio/illustration/illu4.png" alt="portfolio-image" class="img-fluid rounded w-100 d-block">
-        </div>
-      </div>
-      <div class="col-lg-4 col-6 mb-4 shuffle-item" data-groups="[&quot;illustration&quot;]">
-        <div class="position-relative rounded">
-          <img src="images/portfolio/illustration/illu5.jpg" alt="portfolio-image" class="img-fluid rounded w-100 d-block">
-        </div>
-      </div>
-      <div class="col-lg-4 col-6 mb-4 shuffle-item" data-groups="[&quot;illustration&quot;]">
-        <div class="position-relative rounded">
-          <img src="images/portfolio/illustration/illu6.png" alt="portfolio-image" class="img-fluid rounded w-100 d-block">
-        </div>
-      </div>
-      <div class="col-lg-4 col-6 mb-4 shuffle-item" data-groups="[&quot;illustration&quot;]">
-        <div class="position-relative rounded">
-          <img src="images/portfolio/illustration/illu7.jpg" alt="portfolio-image" class="img-fluid rounded w-100 d-block">
-        </div>
-      </div>
-      <div class="col-lg-4 col-6 mb-4 shuffle-item" data-groups="[&quot;illustration&quot;]">
-        <div class="position-relative rounded">
-          <img src="images/portfolio/illustration/illu8.jpg" alt="portfolio-image" class="img-fluid rounded w-100 d-block">
-        </div>
-      </div>
-      <div class="col-lg-4 col-6 mb-4 shuffle-item" data-groups="[&quot;illustration&quot;]">
-        <div class="position-relative rounded">
-          <img src="images/portfolio/illustration/illu9.png" alt="portfolio-image" class="img-fluid rounded w-100 d-block">
-        </div>
-      </div>
-      <div class="col-lg-4 col-6 mb-4 shuffle-item" data-groups="[&quot;illustration&quot;]">
-        <div class="position-relative rounded">
-          <img src="images/portfolio/illustration/illu10.png" alt="portfolio-image" class="img-fluid rounded w-100 d-block">
-        </div>
-      </div>
-      <div class="col-lg-4 col-6 mb-4 shuffle-item" data-groups="[&quot;illustration&quot;]">
-        <div class="position-relative rounded">
-          <img src="images/portfolio/illustration/illu11.jpg" alt="portfolio-image" class="img-fluid rounded w-100 d-block">
-        </div>
-      </div>
-   	  <div class="col-lg-4 col-6 mb-4 shuffle-item" data-groups="[&quot;illustration&quot;]">
-        <div class="position-relative rounded">
-          <img src="images/portfolio/illustration/illu12.png" alt="portfolio-image" class="img-fluid rounded w-100 d-block">
-        </div>
-      </div>
-       <div class="col-lg-4 col-6 mb-4 shuffle-item" data-groups="[&quot;illustration&quot;]">
-        <div class="position-relative rounded">
-          <img src="images/portfolio/illustration/illu13.png" alt="portfolio-image" class="img-fluid rounded w-100 d-block">
-        </div>
-      </div>
-
-    </div>
-  </div>
-</section>
-<!-- /portfolio -->
-
-<!-- footer -->
-<footer class="bg-dark footer-section">
-  <div class="section">
-    <div class="container text-center">
-        <h3 class="text-light"> Contact me at melanie.j.balaz(at)gmail.com </h3>
-    </div>
-  </div>
-  <div class="border-top text-center border-dark py-5">
-    <p class="mb-0 text-light">Copyright ©<script>
-        var CurrentYear = new Date().getFullYear()
-        document.write(CurrentYear)
-      </script> a theme by <a href="https://themefisher.com">themefisher.com</a></p>
-  </div>
-</footer>
-<!-- /footer -->
-
-<!-- jQuery -->
-<script src="plugins/jQuery/jquery.min.js"></script>
-<!-- Bootstrap JS -->
-<script src="plugins/bootstrap/bootstrap.min.js"></script>
-<!-- slick slider -->
-<script src="plugins/slick/slick.min.js"></script>
-<!-- filter -->
-<script src="plugins/shuffle/shuffle.min.js"></script>
-
-<!-- Main Script -->
-<script src="js/script.js"></script>
-
+  <script src="js/script.js"></script>
 </body>
 </html>
