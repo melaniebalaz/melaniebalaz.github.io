@@ -55,3 +55,44 @@ if (siteNav) {
     });
   });
 }
+
+const lightbox = document.querySelector(".lightbox");
+const lightboxImage = document.querySelector(".lightbox-image");
+const lightboxClose = document.querySelector(".lightbox-close");
+
+if (lightbox && lightboxImage) {
+  document.querySelectorAll(".lightbox-trigger").forEach((trigger) => {
+    trigger.addEventListener("click", () => {
+      const image = trigger.querySelector("img");
+      if (!image) {
+        return;
+      }
+
+      lightboxImage.src = image.currentSrc || image.src;
+      lightboxImage.alt = image.alt;
+      lightbox.hidden = false;
+      document.body.style.overflow = "hidden";
+    });
+  });
+
+  const closeLightbox = () => {
+    lightbox.hidden = true;
+    lightboxImage.src = "";
+    lightboxImage.alt = "";
+    document.body.style.overflow = "";
+  };
+
+  lightboxClose?.addEventListener("click", closeLightbox);
+
+  lightbox.addEventListener("click", (event) => {
+    if (event.target === lightbox) {
+      closeLightbox();
+    }
+  });
+
+  document.addEventListener("keydown", (event) => {
+    if (event.key === "Escape" && !lightbox.hidden) {
+      closeLightbox();
+    }
+  });
+}
