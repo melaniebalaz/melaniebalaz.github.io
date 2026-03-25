@@ -432,8 +432,10 @@ button {
 }
 
 .story-gallery-masonry {
-  columns: 3 240px;
-  column-gap: 28px;
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 28px;
+  align-items: start;
 }
 
 .couple-gallery .story-gallery-masonry {
@@ -441,8 +443,7 @@ button {
 }
 
 .story-frame {
-  margin: 0 0 28px;
-  break-inside: avoid;
+  margin: 0;
   background: rgba(255, 252, 247, 0.92);
 }
 
@@ -607,8 +608,8 @@ button {
   }
 
   .story-gallery-masonry {
-    columns: 2 220px;
-    column-gap: 20px;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 20px;
   }
 
   .about-inner {
@@ -665,7 +666,7 @@ button {
   }
 
   .story-gallery-masonry {
-    columns: 1;
-    column-gap: 0;
+    grid-template-columns: 1fr;
+    gap: 20px;
   }
 }
