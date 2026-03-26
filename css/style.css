@@ -27,6 +27,7 @@ body {
     linear-gradient(180deg, #fcf7f0 0%, #f7efe5 100%);
   color: var(--text);
   font-family: "Montserrat", sans-serif;
+  overflow-x: hidden;
 }
 
 img {
@@ -527,7 +528,8 @@ button {
 
 @media (max-width: 1100px) {
   .site-header {
-    padding: 28px 24px;
+    gap: 16px;
+    padding: 22px 20px;
     border-radius: 0;
   }
 
@@ -539,10 +541,12 @@ button {
   .site-nav {
     position: absolute;
     top: calc(100% - 8px);
-    right: 16px;
+    right: 12px;
     display: none;
-    width: min(320px, calc(100vw - 48px));
-    padding: 20px 22px 24px;
+    width: min(320px, calc(100vw - 24px));
+    max-height: min(70svh, 480px);
+    overflow-y: auto;
+    padding: 18px 18px 22px;
     border: 1px solid rgba(77, 64, 51, 0.08);
     background: rgba(255, 252, 247, 0.96);
     box-shadow: 0 16px 30px rgba(50, 37, 26, 0.08);
@@ -578,21 +582,24 @@ button {
 
   .nav-toggle {
     display: block;
+    padding: 0;
+    font-size: 0.76rem;
+    line-height: 1;
   }
 
   .hero,
   .hero img {
-    min-height: 620px;
+    min-height: 76svh;
   }
 
   .work-section,
   .story-page {
-    padding-left: 24px;
-    padding-right: 24px;
+    padding-left: 20px;
+    padding-right: 20px;
   }
 
   .section-spacer {
-    height: 96px;
+    height: 80px;
   }
 
   .card-grid,
@@ -613,18 +620,19 @@ button {
   }
 
   .about-inner {
-    padding: 0 24px;
+    padding: 0 20px;
     grid-template-columns: 1fr;
-    gap: 28px;
+    gap: 24px;
   }
 
   .about-text {
-    margin: 28px 0 42px;
+    margin: 20px 0 32px;
+    max-width: 34rem;
   }
 
   .about-portrait {
     margin-top: 0;
-    max-width: 420px;
+    max-width: 360px;
   }
 }
 
@@ -634,20 +642,29 @@ button {
   }
 
   .site-header {
-    inset: 8px auto auto 50%;
+    left: 0;
+    right: 0;
+    top: 0;
+    width: 100%;
+    gap: 12px;
+    padding: 16px 14px;
   }
 
   .brand {
-    font-size: 2.2rem;
+    font-size: 1.35rem;
+    line-height: 1;
   }
 
   .hero-copy {
-    left: 24px;
-    right: 24px;
-    bottom: 28px;
+    left: 16px;
+    right: 16px;
+    bottom: 20px;
   }
 
   .hero h1 {
+    font-size: clamp(2rem, 12vw, 3.15rem);
+    line-height: 0.96;
+    letter-spacing: 0.02em;
     text-align: left;
   }
 
@@ -657,16 +674,150 @@ button {
     letter-spacing: 0.18em;
   }
 
+  .site-nav {
+    right: 8px;
+    width: calc(100vw - 16px);
+    gap: 18px;
+    font-size: 0.72rem;
+  }
+
+  .work-dropdown {
+    gap: 14px;
+    padding-left: 12px;
+  }
+
+  .hero,
+  .hero img {
+    min-height: 70svh;
+  }
+
+  .work-section {
+    padding-bottom: 52px;
+  }
+
+  .section-spacer {
+    height: 56px;
+  }
+
+  .card-grid {
+    gap: 24px;
+  }
+
+  .story-card span {
+    margin-top: 16px;
+    font-size: 0.8rem;
+  }
+
+  .about-section {
+    padding: 56px 0 76px;
+  }
+
+  .about-inner {
+    padding: 0 16px;
+  }
+
+  .about-text {
+    margin: 16px 0 24px;
+    font-size: clamp(1.45rem, 8vw, 2.05rem);
+    line-height: 1.1;
+  }
+
+  .about-contact {
+    font-size: 0.98rem;
+    line-height: 1.5;
+  }
+
+  .about-portrait {
+    width: min(100%, 280px);
+  }
+
   .story-page {
-    padding-top: 118px;
+    padding: 100px 16px 56px;
   }
 
   .story-title {
-    padding-bottom: 42px;
+    padding: 8px 0 32px;
+  }
+
+  .story-title h1 {
+    font-size: clamp(1.7rem, 11vw, 2.5rem);
+  }
+
+  .back-link {
+    margin-bottom: 20px;
+    font-size: 0.72rem;
+  }
+
+  .couples-list {
+    gap: 36px;
+  }
+
+  .couple-section {
+    padding-top: 18px;
+  }
+
+  .couple-name {
+    font-size: 0.8rem;
+    letter-spacing: 0.2em;
+  }
+
+  .couple-gallery {
+    transition:
+      grid-template-rows 360ms ease,
+      opacity 260ms ease,
+      transform 360ms ease,
+      padding-top 360ms ease;
+  }
+
+  .couple-section.is-open .couple-gallery {
+    padding-top: 20px;
   }
 
   .story-gallery-masonry {
     grid-template-columns: 1fr;
-    gap: 20px;
+    gap: 16px;
+  }
+
+  .lightbox {
+    padding: 52px 12px 12px;
+  }
+
+  .lightbox-close {
+    top: 12px;
+    right: 14px;
+    font-size: 0.72rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .site-header {
+    padding: 14px 12px;
+  }
+
+  .brand {
+    font-size: 1.2rem;
+  }
+
+  .nav-toggle {
+    font-size: 0.7rem;
+    letter-spacing: 0.18em;
+  }
+
+  .hero,
+  .hero img {
+    min-height: 66svh;
+  }
+
+  .hero-copy {
+    left: 14px;
+    right: 14px;
+    bottom: 16px;
+  }
+
+  .work-section,
+  .story-page,
+  .about-inner {
+    padding-left: 14px;
+    padding-right: 14px;
   }
 }
