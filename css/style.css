@@ -375,10 +375,21 @@ button {
 }
 
 .couple-cover {
+  position: relative;
   margin: 0;
   background: rgba(255, 252, 247, 0.92);
   overflow: hidden;
   max-width: 520px;
+}
+
+.couple-cover::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(255, 252, 247, 0.24);
+  opacity: 0;
+  transition: opacity 220ms ease;
+  pointer-events: none;
 }
 
 .couple-cover img {
@@ -386,6 +397,11 @@ button {
   width: 100%;
   height: auto;
   transition: transform 260ms ease, filter 260ms ease;
+}
+
+.couple-toggle:hover .couple-cover::after,
+.couple-toggle:focus-visible .couple-cover::after {
+  opacity: 1;
 }
 
 .couple-toggle:hover .couple-cover img,
