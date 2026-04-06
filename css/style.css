@@ -85,7 +85,7 @@ button {
 }
 
 .brand {
-  font-size: clamp(1.35rem, 1.2vw, 1.95rem);
+  font-size: clamp(1.45rem, 1.35vw, 2.1rem);
   letter-spacing: 0.02em;
 }
 
@@ -506,20 +506,6 @@ button {
   padding-top: 28px;
 }
 
-.story-gallery-split {
-  display: grid;
-  grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
-  gap: 64px;
-  align-items: start;
-  margin-bottom: 42px;
-}
-
-.story-gallery-grid {
-  display: grid;
-  grid-template-columns: repeat(3, minmax(0, 1fr));
-  gap: 36px;
-}
-
 .story-gallery-masonry {
   display: grid;
   grid-template-columns: repeat(3, minmax(0, 1fr));
@@ -534,14 +520,6 @@ button {
 .story-frame {
   margin: 0;
   background: rgba(255, 252, 247, 0.92);
-}
-
-.story-frame-tall {
-  aspect-ratio: 0.76;
-}
-
-.story-frame-wide {
-  aspect-ratio: 1.24;
 }
 
 .story-frame-gallery {
@@ -691,8 +669,7 @@ button {
   }
 
   .card-grid,
-  .story-gallery-split,
-  .story-gallery-grid {
+  .story-gallery-masonry {
     grid-template-columns: 1fr;
     gap: 32px;
   }
