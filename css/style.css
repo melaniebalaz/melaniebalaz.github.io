@@ -241,6 +241,14 @@ button {
   display: block;
 }
 
+.story-card-wide {
+  grid-column: 1 / -1;
+}
+
+.story-card-wide .story-image-wrap {
+  aspect-ratio: 2.15;
+}
+
 .story-image-wrap {
   aspect-ratio: 1.02;
   overflow: hidden;
