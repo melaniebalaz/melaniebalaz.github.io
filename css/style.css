@@ -239,6 +239,7 @@ button {
 
 .story-card {
   display: block;
+  text-align: center;
 }
 
 .story-card-wide {
@@ -246,7 +247,7 @@ button {
 }
 
 .story-card-wide .story-image-wrap {
-  aspect-ratio: 2.15;
+  aspect-ratio: 2.4;
 }
 
 .story-image-wrap {
